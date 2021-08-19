@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+.header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.general{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.personal input {
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+}
+.viaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 5px;
+    margin-left: 30px;
+    
+}
+.viaje select{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+}
+.viaje p {
+    margin: 5px auto;
+    color: blue;
+}
+.check{
+    margin: 5px auto;
+}
+.paises{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px ;
+}
+.paises div{
+    margin-right: 20px;
+}
+.varios{
+    margin: 15px auto;
+}
+.varios p{
+    text-align: center;
+    color: blue;
+}
+#child{
+    display: none;
+}
+.mensaje{
+    margin:10px auto;
+    padding: 10px;
+}
+.mensaje textarea{
+    width: 100%;
+    padding:10px;
+}
+.envio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.boton{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+    margin-left: 40px;
+}
+.boton:hover{
+    background-color: #161616;
+    color: white;
+}
+@media only screen and (max-width: 768px) {
+    .general{
+        grid-template-columns: 1fr;
+    }
+}
