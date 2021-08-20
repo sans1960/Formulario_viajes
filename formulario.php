@@ -50,15 +50,14 @@
                  <option value="">Choose travellers</option>
                <option value="individual">Individual</option>
                <option value="couple">Couple</option>
-               <option id="show" value="family">Family</option>
+               <option id="show" onclick="$('#child').show();" value="family">Family</option>
                <option value="group">Group</option>
                </select>
                <div id="child">
-                   <p>Children ?</p>
-               <input type="radio" name="children" value="Yes">
-               <label>Yes</label>
-               <input type="radio" name="children" value="No">
-               <label>No</label>
+                   
+               <input type="checkbox" name="children" value="Travel with children">
+               <label>Travel with children</label>
+               
                </div>
                <p>Trip type</p>
                <br>
@@ -138,10 +137,10 @@
     </div>
 </form>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script>
+<!-- <script>
     $("#show").click(function(){
   $("#child").show();
 })
-</script>
+</script> -->
 </body>
 </html>
