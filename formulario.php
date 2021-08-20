@@ -46,11 +46,11 @@
                <option value="autumm">Autumm</option>
                </select> 
                
-                 <select  name="travellers" required>
+                 <select id="travel" name="travellers" required>
                  <option value="">Choose travellers</option>
                <option value="individual">Individual</option>
                <option value="couple">Couple</option>
-               <option id="show" onclick="$('#child').show();" value="family">Family</option>
+               <option  value="family">Family</option>
                <option value="group">Group</option>
                </select>
                <div id="child">
@@ -136,11 +136,18 @@
         </div>
     </div>
 </form>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<!-- <script>
-    $("#show").click(function(){
-  $("#child").show();
-})
-</script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+        $(document).ready(function(){ 
+     $('#travel').on('change', function() { 
+     if ( this.value == 'family'){ 
+     	$("#child").show(); 
+     } 
+     else{ 
+     	$("#child").hide(); 
+     } 
+     }); 
+    }); 
+</script>
 </body>
 </html>
