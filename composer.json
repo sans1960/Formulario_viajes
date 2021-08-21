@@ -1,0 +1,14 @@
+{
+    "name": "albert/formulario_viajes",
+    "description": "forms viajes",
+    "type": "project",
+    "require": {
+        "gregwar/captcha": "^1.1"
+    },
+    "authors": [
+        {
+            "name": "sans1960",
+            "email": "asanscliment@gmail.com"
+        }
+    ]
+}

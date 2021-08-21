@@ -16,8 +16,10 @@
 </div>
 <form action="procesar.php" method="post">
     <div class="formulario">
+
         <div class="general">
             <div class="personal">
+                <input type="hidden" name="code" value="<?php echo uniqid();?>">
                 <input type="text" name="name" id="" placeholder="Your Name" required>
                 <input type="text" name="surname" id="" placeholder="Your Surname" required>
                 <input type="email" name="email" id="" placeholder="Your Email" required>

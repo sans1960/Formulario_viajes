@@ -15,6 +15,7 @@
 
     <?php
 if(isset($_POST['send'])){
+    $code = $_POST['code'];
     $name = $_POST['name'];
     $surname = $_POST['surname'];
     $email = $_POST['email'];
@@ -26,16 +27,30 @@ if(isset($_POST['send'])){
     $season = $_POST['season'];
     $travellers = $_POST['travellers'];
     $triptype = $_POST['triptype'];
-    $specifications = $_POST['specifications'];
-    $children =$_POST['children'];
-    $destinity = $_POST['destinity'];
+    if(isset($_POST['specifications'])){
+        $specifications = $_POST['specifications'];
+    }else{
+        $specifications = null;
+    }
+   
+    if(isset($_POST['children'])){
+        $children =$_POST['children'];
+    }else{
+        $children = null;
+    }
+    if(isset($_POST['destinity'])){
+        $destinity = $_POST['destinity'];
+    }else{
+        $destinity=null;
+    }
+   
     $message = $_POST['message'];
 
-    // $data = file_get_contents('contactes.json');
-    // $data;
-    // $data = json_decode($data,true);
+     $data = file_get_contents('data/contactes.json');
+     $data = json_decode($data,true);
 
     $input = array(
+        'code'=>$_POST['code'],
         'name' => $_POST['name'],
         'surname' => $_POST['surname'],
         'email' => $_POST['email'],
@@ -47,14 +62,14 @@ if(isset($_POST['send'])){
         'season' => $_POST['season'],
         'travellers' => $_POST['travellers'],
         'triptype' => $_POST['triptype'],
-        'specifications' => $_POST['specifications'],
-        'children'=>$_POST['children'],
-        'destinity'=>$_POST['destinity'],
+        'specifications' => $specifications,
+        'children'=>  $children,           
+        'destinity'=>$destinity,
         'message' => $_POST['message'],
     );
     $data[] = $input;
     $data = json_encode($data, JSON_PRETTY_PRINT);
-     file_put_contents('contact'.$name.'.'.'json', $data);
+     file_put_contents('data/contactes.json', $data);
     
 
      echo "<div class='alert'>";
