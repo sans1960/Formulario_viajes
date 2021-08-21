@@ -3,7 +3,8 @@
     "description": "forms viajes",
     "type": "project",
     "require": {
-        "gregwar/captcha": "^1.1"
+        "gregwar/captcha": "^1.1",
+        "mpdf/mpdf": "^8.0"
     },
     "authors": [
         {
