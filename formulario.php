@@ -125,7 +125,7 @@
                 </div>
             </div>
         <div class="mensaje">
-            <textarea name="message" placeholder="Write here ...." id="" cols="100" rows="10"></textarea>
+            <textarea name="message2" placeholder="Write here ...." id="" cols="100" rows="10"></textarea>
         </div>
         <div class="envio">
             <div>
